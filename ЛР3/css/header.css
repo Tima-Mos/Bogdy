@@ -1,0 +1,61 @@
+body{
+    font-family: Trebuchet MS, sans-serif;
+}
+
+header{
+    display: flex;/* Элементы горизантально */
+    flex-flow: row nowrap;
+    justify-content: flex-start;/* Элементы выранены по левой стороне */
+    align-items: center;/* вертикально центр */
+}
+
+.logo{
+    width: 90px;
+    height: 60px;
+    margin-right: 450px;/* margin-внешние отступы */
+    margin-left: 20px;
+}
+
+.menu{
+    margin-right: 30px;/* прижать элемент к правому краю*/
+}
+
+.icons{
+    margin-left: auto;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.menu li {
+    margin-right: 30px;
+}
+.menu li:last-child {
+    margin-right: 0;
+}
+.menu a {
+    padding: 8px 10px;/* padding-внутренние отступы */
+    color: black;
+    text-decoration: none;/* убираем стили ссылок */
+}
+
+.menu a:hover {
+    color: grey;
+}
+
+.menu ul {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 2px 0 0;
+    padding: 0;
+    font-size: 23px;/* Размер шрифтв */
+    line-height: 18px;
+    list-style: none;/* убираем стили списка */
+}
+
+.icon:last-child{
+    margin-right: 0px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+  <link href="../css/buket.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+  <h1 onclick="addTr()">Корзина</h1>
+  <table class="tab">
+    <tr>
+      <th>название</th>
+      <th>краткое описание</th>
+      <th>цена</th>
+      <th>фото</th>
+    </tr>
+    <tr>
+      <td> ноутбук попкин</td>
+      <td> оченб класный</td>
+      <td> 5 денег</td>
+      <td class="tdImage"><img src="../img/asus.avif" alt="Изображение товара" class="image"></td>
+    </tr>
+  </table>
+</div>
+<script>
+  function addTr(){
+    document.querySelector(".tab").append("<tr>\n" +
+            "      <td> Ноутбук Asus</td>\n" +
+            "      <td> оченб класный</td>\n" +
+            "      <td> 5 денег</td>\n" +
+            "    </tr>");
+  }
+</script>
+</body>
+</html>

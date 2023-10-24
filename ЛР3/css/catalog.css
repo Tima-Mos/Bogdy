@@ -1,0 +1,90 @@
+.icon_filter{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.filter_price{
+    display: flex;
+}
+
+.filter_price_text p{
+    margin: 0;
+}
+
+.catalog{
+    display: flex;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.catalog a{
+    text-decoration: none;
+}
+
+.filter_products{
+    color: grey;
+    font-family:'Courier New', Courier, monospace;
+    text-decoration: none;
+    font-size:20px
+}
+
+.filter_products h3{
+    color: black;
+    margin: 30px 0 60px 70px;
+}
+
+.filter_products input{
+    margin-bottom: 35px;
+}
+
+/* Удалите лишние левые и правые поля из-за заполнения столбцов */
+.row {
+    margin: 0 -5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Очистить поплавки после столбцов */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Стиль встречных карт */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /*  эффект "карточек" */
+  padding: 16px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.popular_btn{
+    font-family: Trebuchet MS, sans-serif;
+    width: 100%;
+    border-style: none; 
+    font-size: 20px;
+    background-color: #80dcec;
+    border-radius: 30px;
+}
+
+.popular_btn :hover{
+    cursor: pointer;
+}
+
+.column {
+    float: left;/* прижать влево*/
+    width: 33%;
+    padding: 0 10px;
+    padding-bottom: 40px;
+}
+
+.popular_img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.products{
+    margin-left:40px;
+}

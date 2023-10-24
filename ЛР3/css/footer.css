@@ -1,0 +1,32 @@
+footer{
+    display: flex;
+    justify-content: space-between;/* элементы рапредилить по всей ширине */
+    margin-bottom: 50px;
+}
+
+.footer_icons{
+    text-align: right;
+}
+
+.footer_text{
+    display:flex;
+}
+
+.footer_menu{
+    margin-left: 120px;
+}
+
+.footer_column{
+    margin-bottom: 30px;
+}
+
+footer a, p{
+    color: grey;
+    font-family:'Courier New', Courier, monospace;
+    text-decoration: none;
+    font-size:20px
+}
+
+.footer_icons{
+    padding-top: 30px;
+}

@@ -1,0 +1,35 @@
+.advantages li{
+    list-style: none;
+}
+
+.advantages h3{
+    margin-left: 60px;
+}
+
+.advantages p{
+    margin-left: 90px;
+}
+
+.title{
+    text-align: center;
+}
+
+.about_me{
+    text-align: center;
+}
+
+.about_me_img{
+    width: 90%;
+}
+
+.about_me_photo{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.icon_arrow{
+    width: 35px;
+    height: 35px;
+    align-self: center;
+}
