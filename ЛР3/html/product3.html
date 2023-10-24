@@ -24,7 +24,7 @@
             </ul>
         </nav>
         <div class="icons">
-            <a class="icon" href="/">
+            <a class="icon" href="bucket.html">
                 <img class="icon" src="../img/basket.png" alt="Корзина">
             </a>
             <a class="icon" href="/">
@@ -45,7 +45,7 @@
                 <h1>Ноутбук HONOR Magicbook 15</h1>
                 <p class="product_price">Цена:</p>
                 <p class="product_price">54 999 p</p>
-                <button class="price_btn">Добавить в корзину</button>
+                <button class="price_btn" onclick="localPush()">Добавить в корзину</button>
             </div>
         </div>
 
@@ -112,5 +112,15 @@
         <img src="../img/youtube.png" alt="Youtube" class="icon">
     </div>
     </footer>
+    <script>
+        function localPush(){
+            localStorage.setItem('3' ,"<tr>\n" +
+                "      <td>HONOR Magicbook 15</td>\n" +
+                "      <td>Windows 10,оперативной 16 ГБ, Radeon Graphics, Объем SSD 512 ГБ, аккумулятор до 11 часов, экран 15.6</td>\n" +
+                "      <td> 54 999₽</td>\n" +
+                "      <td class=\"tdImage\"><img src=\"../img/honor.avif\" alt=\"Изображение товара\" class=\"image\"></td>\n" +
+                "    </tr>")
+        }
+    </script>
 </body>
 </html>

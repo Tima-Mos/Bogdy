@@ -4,33 +4,88 @@
     <meta charset="UTF-8">
     <title>Корзина</title>
   <link href="../css/buket.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+
 </head>
 <body>
-<div class="container">
-  <h1 onclick="addTr()">Корзина</h1>
-  <table class="tab">
-    <tr>
-      <th>название</th>
-      <th>краткое описание</th>
-      <th>цена</th>
-      <th>фото</th>
-    </tr>
-    <tr>
-      <td> ноутбук попкин</td>
-      <td> оченб класный</td>
-      <td> 5 денег</td>
-      <td class="tdImage"><img src="../img/asus.avif" alt="Изображение товара" class="image"></td>
-    </tr>
-  </table>
-</div>
+<header>
+  <div class="logo">
+    <a href="../html/home_page.html">
+      <img class="logo" src="../img/logo.png" alt="Логотип">
+    </a>
+  </div>
+  <nav class="menu">
+    <ul>
+      <li><a href="./home_page.html">Главная</a></li>
+      <li><a href="./catalog.html">Каталог</a></li>
+      <li><a href="./about_me.html">О нас</a></li>
+      <li><a href="/contacts">Контакты</a></li>
+    </ul>
+  </nav>
+  <div class="icons">
+    <a class="icon" href="/">
+      <img class="icon" src="../img/basket.png" alt="Корзина">
+    </a>
+    <a class="icon" href="/">
+      <img class="icon" src="../img/person.png" alt="Личный кабинет">
+    </a>
+  </div>
+</header>
+
+
+  <main>
+    <div class="container">
+      <h1>Корзина</h1>
+      <table class="tab">
+        <tr>
+          <th>название</th>
+          <th>краткое описание</th>
+          <th>цена</th>
+          <th>фото</th>
+        </tr>
+      </table>
+    </div>
+    <button class="button" onclick="localClear()">Очистить</button>
+  </main>
+
+<footer>
+  <div class="footer_text">
+    <div class="footer_menu">
+      <p class="footer_column">Пн-Вс 10:00-23:00</p>
+      <a href="tel:+(937)723-111-345">+(937)723-111-345</a>
+    </div>
+    <nav class="footer_menu">
+      <p class="footer_column"><a href="./home_page.html">Главная</a></p>
+      <a href="../html/catalog.html">Каталог</a>
+    </nav>
+    <nav class="footer_menu">
+      <p class="footer_column"><a href="./about_me.html">О нас</a></p>
+      <a href="">Контакты</a>
+    </nav>
+  </div>
+  <div class="footer_icons">
+    <img src="../img/telegram.png" alt="Telegram" class="icon">
+    <img src="../img/twitter.png" alt="Twitter" class="icon">
+    <img src="../img/facebook.png" alt="Facebook" class="icon">
+    <img src="../img/youtube.png" alt="Youtube" class="icon">
+  </div>
+</footer>
+
 <script>
-  function addTr(){
-    document.querySelector(".tab").append("<tr>\n" +
-            "      <td> Ноутбук Asus</td>\n" +
-            "      <td> оченб класный</td>\n" +
-            "      <td> 5 денег</td>\n" +
-            "    </tr>");
+  loadTabl();
+  function loadTabl(){
+    let keys = Object.keys(localStorage);
+    for(let key of keys) {
+      console.log(`${key}: ${localStorage.getItem(key)}`);
+      document.querySelector(".tab").insertAdjacentHTML("beforeend" ,localStorage.getItem(key));
+    }
+  }
+
+  function localClear(){
+    localStorage.clear();
   }
 </script>
+
 </body>
 </html>

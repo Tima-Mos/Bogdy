@@ -24,7 +24,7 @@
             </ul>
         </nav>
         <div class="icons">
-            <a class="icon" href="/">
+            <a class="icon" href="bucket.html">
                 <img class="icon" src="../img/basket.png" alt="Корзина">
             </a>
             <a class="icon" href="/">
@@ -45,7 +45,7 @@
                 <h1>Телевизор Samsung UE50BU8000U</h1>
                 <p class="product_price">Цена:</p>
                 <p class="product_price">53 999 р</p>
-                <button class="price_btn">Добавить в корзину</button>
+                <button class="price_btn" onclick="localPush()">Добавить в корзину</button>
             </div>
         </div>
 
@@ -120,5 +120,15 @@
         <img src="../img/youtube.png" alt="Youtube" class="icon">
     </div>
     </footer>
+    <script>
+        function localPush(){
+            localStorage.setItem('5' ,"<tr>\n" +
+                "      <td>Телевизор Samsung UE50BU8000U</td>\n" +
+                "      <td>Телевизор обладает 50-дюймовым LED-экраном формата 16:9 разрешением 3840х2160 пикселей (4K Ultra HD). Время отклика 8 мс. Частота обновления достигает 50 Гц.</td>\n" +
+                "      <td> 53 999₽</td>\n" +
+                "      <td class=\"tdImage\"><img src=\"../img/tv.avif\" alt=\"Изображение товара\" class=\"image\"></td>\n" +
+                "    </tr>")
+        }
+    </script>
 </body>
 </html>

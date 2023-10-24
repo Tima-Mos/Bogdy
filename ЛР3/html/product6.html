@@ -24,7 +24,7 @@
             </ul>
         </nav>
         <div class="icons">
-            <a class="icon" href="/">
+            <a class="icon" href="bucket.html">
                 <img class="icon" src="../img/basket.png" alt="Корзина">
             </a>
             <a class="icon" href="/">
@@ -45,7 +45,7 @@
                 <h1>Ноутбук игровой MSI Katana 17</h1>
                 <p class="product_price">Цена:</p>
                 <p class="product_price">119 999 p</p>
-                <button class="price_btn">Добавить в корзину</button>
+                <button class="price_btn" onclick="localPush()">Добавить в корзину</button>
             </div>
         </div>
 
@@ -112,5 +112,15 @@
         <img src="../img/youtube.png" alt="Youtube" class="icon">
     </div>
     </footer>
+    <script>
+        function localPush(){
+            localStorage.setItem('6' ,"<tr>\n" +
+                "      <td>игровой MSI Katana 17</td>\n" +
+                "      <td>\tWindows 11 Домашняя,оперативной 16 ГБ, GeForce RTX 4060 8GB, Объем SSD 512 ГБ, аккумулятор до 6 часов, экран 17.3</td>\n" +
+                "      <td> 119 999₽</td>\n" +
+                "      <td class=\"tdImage\"><img src=\"../img/mac.avif\" alt=\"Изображение товара\" class=\"image\"></td>\n" +
+                "    </tr>")
+        }
+    </script>
 </body>
 </html>

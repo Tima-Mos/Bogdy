@@ -24,7 +24,7 @@
             </ul>
         </nav>
         <div class="icons">
-            <a class="icon" href="/">
+            <a class="icon" href="bucket.html">
                 <img class="icon" src="../img/basket.png" alt="Корзина">
             </a>
             <a class="icon" href="/">
@@ -45,7 +45,7 @@
                 <h1>Робот-пылесос Dreame F9 Pro White </h1>
                 <p class="product_price">Цена:</p>
                 <p class="product_price">27 999 р</p>
-                <button class="price_btn">Добавить в корзину</button>
+                <button class="price_btn" onclick="localPush()">Добавить в корзину</button>
             </div>
         </div>
 
@@ -112,5 +112,15 @@
         <img src="../img/youtube.png" alt="Youtube" class="icon">
     </div>
     </footer>
+    <script>
+        function localPush(){
+            localStorage.setItem('4' ,"<tr>\n" +
+                "      <td>Робот-пылесос Dreame F9 Pro White</td>\n" +
+                "      <td>Робот-пылесос Dreame Bot Robot Vacuum and Mop D9 Pro White выполняет сухую и влажную уборку и способен обработать до 160 м² площади без подзарядки. Емкость аккумулятора — 3200 мА*ч, он восстанавливает свой ресурс за 7 часов.</td>\n" +
+                "      <td> 27 999₽</td>\n" +
+                "      <td class=\"tdImage\"><img src=\"../img/vacuum.avif\" alt=\"Изображение товара\" class=\"image\"></td>\n" +
+                "    </tr>")
+        }
+    </script>
 </body>
 </html>

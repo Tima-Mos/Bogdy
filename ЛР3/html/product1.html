@@ -24,7 +24,7 @@
             </ul>
         </nav>
         <div class="icons">
-            <a class="icon" href="/">
+            <a class="icon" href="bucket.html">
                 <img class="icon" src="../img/basket.png" alt="Корзина">
             </a>
             <a class="icon" href="/">
@@ -34,7 +34,7 @@
     </header>
 
     <main>
-        <div class="product_info" onclick="localPush(this)">
+        <div class="product_info">
             <div class="product_mini_photo">
                 <img src="../img/asus2.avif" alt="Изображение товара" class="add_photo">
                 <img src="../img/asus3.avif" alt="Изображение товара" class="add_photo">
@@ -45,7 +45,7 @@
                 <h1>Ноутбук Asus</h1>
                 <p class="product_price">Цена:</p>
                 <p class="product_price">27900 p</p>
-                <button class="price_btn">Добавить в корзину</button>
+                <button class="price_btn" onclick="localPush()">Добавить в корзину</button>
             </div>
         </div>
 
@@ -113,11 +113,12 @@
         </div>
     </footer>
     <script>
-        function localPush(obj){
-            console.log("<tr>\n" +
-                "      <td> Ноутбук Asus</td>\n" +
-                "      <td> оченб класный</td>\n" +
-                "      <td> 5 денег</td>\n" +
+        function localPush(){
+            localStorage.setItem('1' ,"<tr>\n" +
+                "      <td>Ноутбук Asus</td>\n" +
+                "      <td>Windows 10,оперативной 16 ГБ, GeForce GTX 1650 4GB, Объем SSD 512 ГБ, аккумулятор до 7 часов, экран 15.6</td>\n" +
+                "      <td>27900₽</td>\n" +
+                "      <td class=\"tdImage\"><img src=\"../img/asus.avif\" alt=\"Изображение товара\" class=\"image\"></td>\n" +
                 "    </tr>")
         }
     </script>

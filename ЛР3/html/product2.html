@@ -24,7 +24,7 @@
             </ul>
         </nav>
         <div class="icons">
-            <a class="icon" href="/">
+            <a class="icon" href="bucket.html">
                 <img class="icon" src="../img/basket.png" alt="Корзина">
             </a>
             <a class="icon" href="/">
@@ -45,7 +45,7 @@
                 <h1>Ноутбук Apple MacBook Air 13</h1>
                 <p class="product_price">Цена:</p>
                 <p class="product_price">95 999 ₽</p>
-                <button class="price_btn">Добавить в корзину</button>
+                <button class="price_btn" onclick="localPush()">Добавить в корзину</button>
             </div>
         </div>
 
@@ -108,5 +108,15 @@
         <img src="../img/youtube.png" alt="Youtube" class="icon">
     </div>
     </footer>
+    <script>
+        function localPush(){
+            localStorage.setItem('2' ,"<tr>\n" +
+                "      <td>Apple MacBook Air 13</td>\n" +
+                "      <td>macOS,оперативной 8 ГБ, Объем SSD 256 ГБ, аккумулятор до 18 часов, экран 13.3</td>\n" +
+                "      <td> 95 999₽</td>\n" +
+                "      <td class=\"tdImage\"><img src=\"../img/mac.avif\" alt=\"Изображение товара\" class=\"image\"></td>\n" +
+                "    </tr>")
+        }
+    </script>
 </body>
 </html>
